@@ -1,0 +1,5 @@
+*.classpath
+*.project
+BE/.settings/
+BE/src/main/resources/application-rjrdb.yml
+BE/target/
