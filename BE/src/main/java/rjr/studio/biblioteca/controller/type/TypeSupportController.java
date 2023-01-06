@@ -10,9 +10,9 @@ import rjr.studio.biblioteca.dao.entity.type.TypeSupportEntity;
 import rjr.studio.biblioteca.service.type.TypeService;
 
 @RestController
-public class TypeSupportController  implements TypeController<TypeSupportEntity>{
+public class TypeSupportController implements TypeController<TypeSupportEntity>{
 	
-	@Autowired TypeService<TypeSupportEntity> service;
+	@Autowired TypeService<TypeSupportEntity, String> service;
 	
 	@Override
 	@GetMapping("/supporti")

@@ -12,7 +12,7 @@ import rjr.studio.biblioteca.service.type.TypeService;
 @RestController
 public class TypeChannelController implements TypeController<TypeChannelEntity> {
 	
-	@Autowired TypeService<TypeChannelEntity> service;
+	@Autowired TypeService<TypeChannelEntity, String> service;
 
 	@Override
 	@GetMapping("/canali")

@@ -10,10 +10,11 @@ import rjr.studio.biblioteca.dao.entity.type.TypeGenreEntity;
 import rjr.studio.biblioteca.service.type.TypeService;
 
 @RestController
-public class TypeGenreController  implements TypeController<TypeGenreEntity> {
+public class TypeGenreController implements TypeController<TypeGenreEntity> {
 	
-	@Autowired TypeService<TypeGenreEntity> service;
+	@Autowired TypeService<TypeGenreEntity, String> service;
 	
+	@Override
 	@GetMapping("/generi")
 	public List<TypeGenreEntity> findAll(){
 		List<TypeGenreEntity> rtn = service.findAll();

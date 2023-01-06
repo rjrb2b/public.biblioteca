@@ -5,6 +5,6 @@ import org.springframework.stereotype.Service;
 import rjr.studio.biblioteca.dao.entity.type.TypeGenreEntity;
 
 @Service
-public class TypeGenreService extends TypeService<TypeGenreEntity> {
+public class TypeGenreService extends TypeService<TypeGenreEntity, String> {
 
 }
