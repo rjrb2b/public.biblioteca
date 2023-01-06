@@ -11,7 +11,9 @@ public abstract class TypeService<E, T> {
 	@Autowired TypeRepository<E, T> repo;
 		
 	public List<E> findAll() {
+		
 		List<E> rtn = repo.findAll();
+		
 		return rtn;
 	}
 

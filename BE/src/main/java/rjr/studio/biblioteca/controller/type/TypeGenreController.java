@@ -16,8 +16,10 @@ public class TypeGenreController implements TypeController<TypeGenreEntity> {
 	
 	@Override
 	@GetMapping("/generi")
-	public List<TypeGenreEntity> findAll(){
+	public List<TypeGenreEntity> findAll() {
+		
 		List<TypeGenreEntity> rtn = service.findAll();
+		
 		return rtn;		
 	}
 
