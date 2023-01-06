@@ -3,7 +3,9 @@ package rjr.studio.biblioteca.dao.repository.type;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import rjr.studio.biblioteca.dao.entity.type.TypeSupportEntity;
+
 @Repository
-public interface TypeRepository<E, T> extends JpaRepository<E, T> {
+public interface TypeSupportRepository extends JpaRepository<TypeSupportEntity, String> {
 
 }

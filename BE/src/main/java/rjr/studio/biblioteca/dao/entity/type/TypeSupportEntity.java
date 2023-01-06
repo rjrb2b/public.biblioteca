@@ -6,8 +6,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "TIPO_GENERE")
-public class TypeGenreEntity {
+@Table(name = "TIPO_SUPPORTO")
+public class TypeSupportEntity {
 	
 	@Id
 	@Column(name = "CODICE", length = 5, nullable = false)
