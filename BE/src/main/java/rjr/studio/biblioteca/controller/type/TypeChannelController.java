@@ -4,21 +4,22 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import rjr.studio.biblioteca.dao.entity.type.TypeChannelEntity;
-import rjr.studio.biblioteca.service.type.TypeChannelService;
+import rjr.studio.biblioteca.service.type.TypeService;
 
 @RestController
-@RequestMapping("/rjr/biblioteca/tipologiche")
-public class TypeChannelController {
+public class TypeChannelController implements TypeController<TypeChannelEntity> {
 	
-	@Autowired TypeChannelService typeChannelService;
-	
+	@Autowired TypeService<TypeChannelEntity> service;
+
+	@Override
 	@GetMapping("/canali")
-	List<TypeChannelEntity> findAll(){
-		List<TypeChannelEntity> rtn = typeChannelService.findAll();
+	public List<TypeChannelEntity> findAll() {
+
+		List<TypeChannelEntity> rtn = service.findAll();
+		
 		return rtn;		
 	}
 
