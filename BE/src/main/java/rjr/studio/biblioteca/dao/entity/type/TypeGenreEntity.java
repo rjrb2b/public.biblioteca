@@ -10,11 +10,11 @@ import javax.persistence.Table;
 public class TypeGenreEntity {
 	
 	@Id
-	@Column(name = "CODICE")
+	@Column(name = "CODICE", length = 5, nullable = false)
 	private String code;
-	@Column(name = "NOME")
+	@Column(name = "NOME", length = 25, nullable = false)
 	private String name;
-	@Column(name = "DESCRIZIONE")
+	@Column(name = "DESCRIZIONE", length = 255, nullable = false)
 	private String description;
 	
 	public String getCode() {
