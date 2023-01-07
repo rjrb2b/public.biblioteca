@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping("/biblioteca/tipologiche")
+@RequestMapping(value = "/biblio/tipologiche")
 public interface TypeController<T> {
 	
-	public List<T> findAll();
+	 public List<T> findAll();
 
 }

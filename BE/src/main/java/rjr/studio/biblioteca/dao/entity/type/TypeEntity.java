@@ -1,22 +1,22 @@
 package rjr.studio.biblioteca.dao.entity.type;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.MappedSuperclass;
 
-@Entity
-@Table(name = "TIPO_GENERE")
-public class TypeGenreEntity {
+@MappedSuperclass
+public class TypeEntity{
 	
-	@Id
-	@Column(name = "CODICE", length = 5, nullable = false)
-	private String code;
-	@Column(name = "NOME", length = 25, nullable = false)
-	private String name;
-	@Column(name = "DESCRIZIONE", length = 255, nullable = false)
-	private String description;
-	
+    @Id
+    @Column(name = "CODICE", length = 5, nullable = false)
+    private String code;
+    @Column(name = "NOME", length = 25, nullable = false)
+    private String name;
+    @Column(name = "DESCRIZIONE", length = 255, nullable = false)
+    private String description;
+    
+    // getters & setters
+    
 	public String getCode() {
 		return code;
 	}
@@ -34,6 +34,6 @@ public class TypeGenreEntity {
 	}
 	public void setDescription(String description) {
 		this.description = description;
-	}	
+	}
 
 }

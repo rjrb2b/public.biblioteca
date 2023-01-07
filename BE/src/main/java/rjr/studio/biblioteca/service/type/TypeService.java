@@ -2,19 +2,10 @@ package rjr.studio.biblioteca.service.type;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import rjr.studio.biblioteca.dao.entity.type.TypeEntity;
 
-import rjr.studio.biblioteca.dao.repository.type.TypeRepository;
-
-public abstract class TypeService<E, T> {
+public interface TypeService<T extends TypeEntity, CODE> {
 	
-	@Autowired TypeRepository<E, T> repo;
-		
-	public List<E> findAll() {
-		
-		List<E> rtn = repo.findAll();
-		
-		return rtn;
-	}
+	public List<T> findAll();
 
 }
