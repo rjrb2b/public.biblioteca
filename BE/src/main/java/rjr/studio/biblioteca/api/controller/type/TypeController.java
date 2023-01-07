@@ -1,4 +1,4 @@
-package rjr.studio.biblioteca.controller.type;
+package rjr.studio.biblioteca.api.controller.type;
 
 import java.util.List;
 
